@@ -1,0 +1,137 @@
+
+        @font-face {
+  font-family: 'iconfont';  /* project id 3201313 */
+  src: url('');
+  src: url('?#iefix') format('embedded-opentype'),
+  url('http://at.alicdn.com/t/font_3201313_0wb57kkf7cqa.woff2') format('woff2'),
+  url('http://at.alicdn.com/t/font_3201313_0wb57kkf7cqa.woff') format('woff'),
+  url('http://at.alicdn.com/t/font_3201313_0wb57kkf7cqa.ttf') format('truetype'),
+  url('#iconfont') format('svg');
+}
+.iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;}
+
+       a{
+           text-decoration: none;
+           color: black;
+       }
+        body{
+            padding: 0;
+            margin: 0;
+            overflow-x: hidden;
+        }
+        .main-box{
+            
+            width: 1600px;
+            margin: 0 auto;
+            height: 1000px;
+            background-color: aqua;
+            margin-top: 180px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            text-align: center;
+        }
+        #line{
+            width: 1300px;
+            height: 250px;
+            background-color: black;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            background-color: white;
+        }
+        #line>div{
+            height: 230px;
+            width: 250px;
+            background-color: white;
+        }
+        .img-box{
+            height: 190px;
+            width: 100%;
+            position: relative;
+        }
+        img{
+            width: 250px;
+            height: 190px;
+        }
+        .tudou{
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 30px;
+            background-color: rgb(29, 49, 38);
+            opacity: .5;
+            
+        }
+        
+        #display{
+            position: absolute;
+            bottom: 7px;
+            left:5px;
+            color: white;
+        }
+        #listen{
+            position: absolute;
+            bottom: 7px;
+            right: 5px;
+            color: white;
+        }
+        .click-amount{
+            position: absolute;
+            bottom: 6px;
+            color: white;
+            left: 26px;
+        }
+        .main-box{
+            background-color: white !important;
+        }
+        .text-box{
+            background-color: white;
+        }
+        h2{
+            text-align: center;
+        }
+        .sec-box{
+            margin: 0 auto;
+            width: 1300px;
+            height: 800px;
+            background-color: white;
+            text-align: center;
+        }
+        .header{
+            display: flex;
+            width: 800px;
+            height: 40px;
+            padding-top: 20px;
+            justify-content: space-between;
+            user-select: none;
+           
+        }
+        .header div{
+            display: block;
+            width: 200px;
+            height: 40px;
+        }
+        .song-name{
+            cursor: pointer;
+        }
+        .bottom-box{
+            width: 1600px;
+            height: 1100px;
+            background-color: white;
+            text-align: center;
+        }
+        .song-word-box{
+            width: 800px;
+            height: 1100px;
+            margin: 0 auto;
+            background-color: white;
+            
+        }
+   
