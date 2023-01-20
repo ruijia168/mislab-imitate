@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        
+        body{
+            
+            width: 100%;
+        }
+        .header{
+            position: relative;
+            min-width: 1519px;
+            height:100vh;
+            width: 100%;
+            overflow-y: hidden;
+            margin-bottom: 100px;
+        }
+        .tv{
+            
+            width: 100%;
+            z-index: -55;
+            
+        }
+        .lefttoplogo{
+            width: 170px;
+            height: 47.58px;
+            position: absolute;
+            top:14px;
+            left: 34px;
+            cursor: pointer;
+        }
+        .lefttoplogo img{
+            width: 110%;
+            height: 110%;
+            z-index: 1;
+        }
+        .nav{
+            position: absolute;
+            width: 415px;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            top: 28px;
+            right: 54px;
+           
+        }
+        .navcontent{
+            font-size: 17px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+        }
+        .navcontent a{
+            display: block;
+            width: 68px;
+            height: 22.4px;
+            color: white;
+            text-decoration: none;
+        }
+        .navcontent a:hover{
+            color: rgb(161, 158, 158);
+            transition: .5s;
+        }
+        .headercentre{
+            width: 990px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -490px;
+            margin-top: -124px;
+            text-align: center;
+        }
+        .centrecontent1{
+            font-size: 30px;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .centrecontent2{
+            font-size: 50px;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .addlimit{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+        }
+        .centrecontent3{
+            width: 80%;
+        letter-spacing: 23px;
+        text-indent: 23px;
+        font-size: 14px;
+        line-height: 17px;
+        opacity: .8;
+        margin: 14PX auto 0;
+        position: relative;
+        }
+        .centrecontent3::before{
+            content: "";
+        display: block;
+        width: 74px;
+        height: 2px;
+        position: absolute;
+        top: calc(50% - 1px);
+        background-image: linear-gradient(
+270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));
+        }
+        .centrecontent3::after{
+            content: "";
+        display: block;
+        width: 74px;
+        height: 2px;
+        position: absolute;
+        top: calc(50% - 1px);
+        background-image: linear-gradient(
+270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));
+        }
+
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <video class="tv" src="../1/asset/shouyeshipin-little.mp4" autoplay muted loop  poster="https://lf3-cdn-tos.bytescm.com/obj/ttfe/ATSX/mainland/video-poster_1576231362701.png"></video>
+            <div class="lefttoplogo">
+                <img src="../1/asset/logo.d32e06fc.png" alt="正在加载">
+            </div>
+            <div class="nav">
+                <div class="navcontent"> <a href="">关于我们</a> </div>
+                <div class="navcontent"> <a href="">部门介绍</a> </div>
+                <div class="navcontent"> <a href="">产品介绍</a> </div>
+                <div class="navcontent"> <a href="">成员动态</a> </div>
+                <div class="navcontent"> <a href="">招新流程</a> </div>
+            </div>
+            <div class="headercentre">
+                <div class="addlimit">
+                <div class="centrecontent1">信管工作室&nbsp;·&nbsp;2021年度邀请函</div>
+                <div class="centrecontent2">想和优秀的你&nbsp;&nbsp;&nbsp;&nbsp;一起改变世界</div>
+                <div class="centrecontent3">JOIN MISLAB</div>
+            </div>
+            </div>
+        </div>
+        <div class="mainbody"></div>
+        <div class="end"></div>
+    </div>
+</body>
+</html>

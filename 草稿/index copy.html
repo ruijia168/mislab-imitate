@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        
+        body{
+            
+            width: 100%;
+        }
+        .header{
+            position: relative;
+            min-width: 1519px;
+            height:100vh;
+            width: 100%;
+            overflow-y: hidden;
+            margin-bottom: 100px;
+        }
+        .tv{
+            
+            width: 100%;
+            z-index: -55;
+            
+        }
+        .lefttoplogo{
+            width: 170px;
+            height: 47.58px;
+            position: absolute;
+            top:14px;
+            left: 34px;
+            cursor: pointer;
+        }
+        .lefttoplogo img{
+            width: 110%;
+            height: 97%;
+            z-index: 1;
+        }
+        .nav{
+            position: absolute;
+            width: 415px;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            top: 28px;
+            right: 54px;
+           
+        }
+        .navcontent{
+            font-size: 17px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+        }
+        .navcontent a{
+            display: block;
+            width: 68px;
+            height: 22.4px;
+            color: white;
+            text-decoration: none;
+        }
+        .navcontent a:hover{
+            color: rgb(161, 158, 158);
+            transition: .5s;
+        }
+        .headercentre{
+            width: 990px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -490px;
+            margin-top: -124px;
+            text-align: center;
+        }
+        .centrecontent1{
+            font-size: 30px;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .centrecontent2{
+            font-size: 50px;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .addlimit{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            user-select: none;
+        }
+        .centrecontent3{
+            width: 80%;
+        letter-spacing: 23px;
+        text-indent: 23px;
+        font-size: 14px;
+        line-height: 17px;
+        opacity: .8;
+        margin: 14PX auto 0;
+        position: relative;
+        color: white;
+        }
+        .centrecontent3::before{
+            content: "";
+        display: block;
+        width: 74px;
+        height: 2px;
+        position: absolute;
+        top: calc(50% - 1px);
+        background-image: linear-gradient(
+270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));
+        }
+        .centrecontent3::after{
+            content: "";
+        display: block;
+        width: 74px;
+        height: 2px;
+        position: absolute;
+        left: 460px;
+        top: calc(50% - 1px);
+        background-image: linear-gradient(
+270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));
+        }
+        .addlimit a{
+            display: block;
+            width: 94px;
+            height: 38px;
+            text-decoration: none;
+            color: black;
+            line-height: 38px;
+            font-size: 16px;
+            font-weight: 350;
+            transition: .6s;
+            
+        }
+        .addlimit button{
+            margin-top: 50px;
+            background: white;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid #d9d9d9;
+            transition: .6s;
+            user-select: none;
+        }
+        .addlimit a:hover{
+            color: #1890ff;
+        }
+        .addlimit button:hover{
+            border-color:#1890ff;
+        }
+        .headerbottom{
+            position:absolute;
+            width: 40PX;
+        height: 40PX;
+        color: #fff!important;
+        left: 50%;
+        bottom: 40PX;
+        transform: translateX(-50%);
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        }
+        
+        .headerbottom .jiantou{
+            font-family: "iconfont"!important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            font-size: 30px;
+        }
+        @font-face {
+        font-family: "iconfont"; /* Project id 2703969 */
+        src: url('iconfont.woff2?t=1627550172448') format('woff2'),
+       url('iconfont.woff?t=1627550172448') format('woff'),
+       url('iconfont.ttf?t=1627550172448') format('truetype');
+}
+
+
+    @keyframes movepoint{
+        0%{
+            top:-8px
+        }
+        50%{
+            top: 5px;
+        }
+        100%{
+            top: -8px;
+        }
+    }
+        .dajiantou{
+            position: relative;
+            animation: movepoint 2s infinite;
+        }
+
+       .jiantou{
+        font-family: "iconfont"!important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        
+        }
+
+/* jiantou */
+        .subsuxian{
+            box-sizing: border-box;
+        margin: 0;
+        color: #1f2329;
+        font-size: 14px;
+        font-variant: tabular-nums;
+        line-height: 1.5;
+        list-style: none;
+        font-feature-settings: "tnum";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0.2vw;
+        padding: 0 0 0 2px;
+        }
+        .subsuxian::after{
+            content: "";
+        display: block;
+        position: relative;
+        height: 36px;
+        left: 50%;
+        transform: translateX(-150%);
+        border-left: 1px dashed #fff;
+        top: 14px;
+        }
+        /* pg2 */
+        /* left */
+        .pg2all{
+            width: 100%;
+            height: 721px;
+            background-color: white;
+        }
+        .mainbody1{
+            display: flex;
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        #leftbigbox{
+            width: 680px;
+            height: 600px;
+            margin-top: 40px;
+        }
+        @keyframes appear{
+        form{opacity: 0;}
+        to{opacity: 1;}
+        }
+        .leftbigboxtitle{
+            height: 400PX;
+        letter-spacing: -1PX;
+        background-color: #f2f2f2;
+        padding: 30PX 70PX;
+        border-radius: 30PX;
+        position: relative;
+        
+        }
+        .leftbigboxtitlehead{
+            font-size: 35px;
+            opacity: 0;
+            animation: appear 1s .1s forwards;
+        }
+        .leftbigboxtitlecontent{
+            font-size: 20PX;
+            line-height: 40PX;
+            margin-top: 20PX;
+            color: #000;
+            font-family: "STKaiti";
+            opacity: 0;
+            animation: appear 1s  .1s forwards;
+        }
+        .leftbigboximg{
+            position: relative;
+        }
+        @keyframes leftboxpeoplebm{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom:54px ;
+                left: 250px;
+            }
+            
+        }
+        
+        @keyframes cx{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom: 145px;
+                left: 59px;
+            }
+        }
+        @keyframes rc{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom: 82px;
+                left: 436px;
+            }
+        }
+        @keyframes js{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom: 48px;
+                left: 586px;
+            }
+        }
+        @keyframes nq{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            
+            100%{   
+                bottom: 137px;
+                left: 230px;
+            }
+        }
+        @keyframes fx{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                left: 547PX;
+                bottom: 130PX;
+            }
+        }
+        @keyframes hk{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                left: 5px;
+                bottom: 71px;
+            }
+        }
+        @keyframes sh{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                left: 391PX;
+                bottom: 150PX;
+            }
+        }
+        @keyframes float{
+            0% {
+        transform: translateY(-3PX);
+        opacity: 1;
+    }
+            50% {
+        transform: translateY(0);
+        opacity: 1;
+}
+            100% {
+         transform: translateY(-3PX);
+        opacity: 1;
+}
+        }
+        .leftboxpeoplebm{
+            animation: leftboxpeoplebm 3s forwards, float 2s 0s infinite;
+        }
+        .leftboxpeoplecx{
+           animation: cx 3s forwards,float 2s .14s infinite;
+        }
+        .leftboxpeoplerc{
+            animation: rc 3s forwards,float 2s .28s infinite;
+        }
+        .leftboxpeoplejs{
+            animation: js 3s forwards,float 2s .42s infinite;
+        }
+        .leftboxpeoplenq{
+            animation: nq 2s forwards,float 2s .56s  infinite
+        }
+        .leftboxpeoplefx{
+            animation: fx 3s forwards,float 2s .7s  infinite
+        }
+        .leftboxpeoplehk{
+            animation: hk 3s forwards,float 2s .84s  infinite
+        }
+        .leftboxpeoplesh{
+            animation: sh 3s forwards,float 2s .98s  infinite
+        }
+
+        .leftbigboximg img{
+            width: 500PX;
+            height: 231PX;
+            position: relative;
+            bottom: 30px;
+            left: 90PX;
+        }
+        
+        .leftbigboximg span{
+            height: 40PX;
+            padding: 3PX 6PX;
+            font-size: 20PX;
+            line-height: 34PX;
+            text-align: center;
+            background-color: #f2f2f2;
+            color: #000;
+            border-radius: 10PX;
+            display: inline-block;
+            position: absolute;
+            
+        }
+        /* pg2right */
+        .rightbigbox{
+            width: 650PX;
+            height: 600PX;
+            margin-top: 40PX;
+            background-color: #f2f2f2;
+            border-radius: 30PX;
+            overflow: hidden;
+            position: relative;
+        }
+        .rightbigbox pre{
+            font-size: 21PX;
+            letter-spacing: 1PX;
+            line-height: 40PX;
+            margin-top: 50PX;
+            margin-bottom: 0;
+            margin-left: 40PX;
+            color: #000;
+            font-family: "STKaiti";
+            opacity: 0;
+            animation: appear 1s  .1s forwards;
+        }
+        .borderbox{
+            position: relative;
+            top: 16px;
+            left: 154px;
+            border: 30px solid #535353;
+            border-radius: 40px;
+            overflow:hidden ;
+            background-color: #535353;
+            animation:  move 1.5s ease forwards;
+        }
+        @keyframes move {
+            0% {
+    transform: translate(491PX,339PX);
+}
+            100% {
+    transform: translate(0);
+}
+            
+        }
+       
+        .rightbigbox .imgbox{
+            position: relative;
+        }
+        .rightbigbox .imgbox img{
+            width: 470PX;
+            height: 313PX;
+            max-width: 470PX;
+            max-height: 313PX;
+            border-radius: 6PX 0 0 0;
+        }
+        .rightbigbox .mask{
+            width: 470px;
+            height: 313px;
+            background-color: rgba(0,0,0,.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: .6s;             
+        }
+        .rightbigbox .mask:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+        .mask div{
+            position: absolute;
+            top: 47%;
+            left: 42%;
+            font-size: 13px;
+            color: #fff;
+        }
+        /* pg3 */
+        .pg3 .mainbody2{
+            position: relative;
+            height: 721px;
+            width: 100%;
+        }
+        .departmenttitle{
+            margin: 0 auto;
+            width: 1px;
+            position: relative;
+        }
+        .mainbody2 .departmenttitle span{
+            width: 130PX;
+            font-size: 30PX;
+            text-align: center;
+            position: absolute;
+            left: 500PX;
+            top: 50PX;
+        }
+        .bgc-lunbo{
+            height: 721PX;
+            position: relative;
+
+        }
+        
+        .lunbokuai{
+            width: 1100PX;
+            height: 450PX;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            display: flex;
+            justify-content: space-between
+        }
+        .lunbokuai .imgbox img{
+            width: 500px;
+            height: 353px;
+            text-align: center;
+        }
+        .wenzikuai{
+            width: 500px;
+        }
+        .end{
+            width: 900px;
+            height: 900px;
+            background-color: #000;
+        }
+        .wenzikuai .biaoti{
+            font-size: 55PX;
+            margin: 11PX 0 58PX;
+        }
+        .wenzikuai .content{
+            font-size: 30px;
+            line-height: 50px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <video class="tv" src="../1/asset/shouyeshipin-little.mp4" autoplay muted loop  poster="https://lf3-cdn-tos.bytescm.com/obj/ttfe/ATSX/mainland/video-poster_1576231362701.png"></video>
+            <div class="lefttoplogo">
+                <img src="../1/asset/logo.d32e06fc.png" alt="正在加载">
+            </div>
+            <div class="nav">
+                <div class="navcontent"> <a href="">关于我们</a> </div>
+                <div class="navcontent"> <a href="">部门介绍</a> </div>
+                <div class="navcontent"> <a href="">产品介绍</a> </div>
+                <div class="navcontent"> <a href="">成员动态</a> </div>
+                <div class="navcontent"> <a href="">招新流程</a> </div>
+            </div>
+            <div class="headercentre">
+                <div class="addlimit">
+                <div class="centrecontent1">信管工作室&nbsp;·&nbsp;2021年度邀请函</div>
+                <div class="centrecontent2">想和优秀的你&nbsp;&nbsp;&nbsp;&nbsp;一起改变世界</div>
+                <div class="centrecontent3">JOIN MISLAB</div>
+                <label for="btn">
+                    <button id="btn">
+                        <span>
+                            <a href="">加入我们</a>
+                        </span>
+                    </button>
+                </label>
+            </div>
+            </div>
+            <div class="headerbottom">
+                <span class="dajiantou">
+                    <span class="jiantou"></span>
+                </span>
+            </div>
+            <div class="subsuxian"></div>
+        </div>
+        <div class="pg2all">
+        <div class="mainbody1">
+            <div class="leftbigbox" id="leftbigbox">
+                <div class="leftbigboxtitle">
+                    <div class="leftbigboxtitlehead">关于我们</div>
+                    <pre class="leftbigboxtitlecontent">
+信管工作室成立于2008年 
+是一个以发展内部成员专业技能与专业素养、提升信管专业
+技术氛围的学生组织。不断探索、实践新的技术体系，在十余年
+的成长过程当中，逐渐完善自身技术体系，扩大团队规模。
+我们希望并也一直在努力将一些成功经验和有趣的团队文化
+传播出去影响更多的人。</pre>
+                </div>
+                <div class="leftbigboximg">
+                    <img src="../1/asset/us.png" alt="图片">
+                    <span class="leftboxpeoplebm">百名工程师</span>
+                    <span class="leftboxpeoplecx">创新</span>
+                    <span class="leftboxpeoplerc">人才培养</span>
+                    <span class="leftboxpeoplejs">技术应用</span>
+                    <span class="leftboxpeoplenq">年轻</span>
+                    <span class="leftboxpeoplefx">分享日</span>
+                    <span class="leftboxpeoplehk">黑客马拉松文化周</span>
+                    <span class="leftboxpeoplesh">周会</span>
+                </div>
+            </div>
+            <div class="rightbigbox">
+                <pre>
+信管工作室永远都是一个温暖积极的大家庭
+这里承载着勤奋、进步、友爱、关怀、和谐与温馨
+这里汇聚了优秀的学长学姐，在学习和生活上伴你同行
+这里诞生了卓越的技术，新颖的产品和以学习至上的优秀理念
+                </pre>
+                <div class="borderbox">
+                <div class="imgbox">
+                    <img src="../1/asset/members.png" alt="">
+                    <div class="mask"><div><svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"></path></svg>Preview</div></div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pg3">
+        <div class="mainbody2">
+            <div class="departmenttitle">
+                <span>部门介绍</span>
+            </div>
+            <div class="bgc-lunbo">
+                    
+                    <div class="lunbokuai">
+                        <div class="imgbox">
+                            <img src="../1/asset/qianduan.png" alt="">
+                        </div>
+                        <div class="wenzikuai">
+                            <div class="biaoti">
+                                Web开发部
+                            </div>
+                            <div class="content">
+                                前端即网站前台部分，运行在PC端，移动端等浏览器上展现给用户浏览的网页。
+                                前端开发人员可以使用完美的动效设计和前端技术，给用户带来极高的页面视觉体验和用户交互体验。
+                            </div>
+                        </div>
+                    </div>
+            
+        
+        
+    </div>
+        <div class="end"></div>
+    </div>
+</body>
+</html>

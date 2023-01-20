@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            box-sizing: border-box;
+            padding: 0;
+            margin: 0;
+        }
+        
+        
+        body{
+            
+            width: 100%;
+        }
+        .header{
+            position: relative;
+            min-width: 1519px;
+            height:100vh;
+            width: 100%;
+            overflow-y: hidden;
+            margin-bottom: 100px;
+        }
+        .tv{
+            
+            width: 100%;
+            z-index: -55;
+            
+        }
+        .lefttoplogo{
+            width: 170px;
+            height: 47.58px;
+            position: absolute;
+            top:14px;
+            left: 34px;
+            cursor: pointer;
+        }
+        .lefttoplogo img{
+            width: 110%;
+            height: 97%;
+            z-index: 1;
+        }
+        .nav{
+            position: absolute;
+            width: 415px;
+            height: 48px;
+            display: flex;
+            justify-content: space-between;
+            top: 28px;
+            right: 54px;
+           
+        }
+        .navcontent{
+            font-size: 17px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+           
+        }
+        .navcontent a{
+            display: block;
+            width: 68px;
+            height: 22.4px;
+            color: white;
+            text-decoration: none;
+        }
+        .navcontent a:hover{
+            color: rgb(161, 158, 158);
+            transition: .5s;
+        }
+        .headercentre{
+            width: 990px;
+            height: 400px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-left: -490px;
+            margin-top: -124px;
+            text-align: center;
+        }
+        .centrecontent1{
+            font-size: 30px;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .centrecontent2{
+            font-size: 50px;
+            color: white;
+            padding-bottom: 10px;
+        }
+        .addlimit{
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-weight: 700;
+            user-select: none;
+        }
+        .centrecontent3{
+            width: 80%;
+        letter-spacing: 23px;
+        text-indent: 23px;
+        font-size: 14px;
+        line-height: 17px;
+        opacity: .8;
+        margin: 14PX auto 0;
+        position: relative;
+        color: white;
+        }
+        .centrecontent3::before{
+            content: "";
+        display: block;
+        width: 74px;
+        height: 2px;
+        position: absolute;
+        top: calc(50% - 1px);
+        background-image: linear-gradient(
+270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));
+        }
+        .centrecontent3::after{
+            content: "";
+        display: block;
+        width: 74px;
+        height: 2px;
+        position: absolute;
+        left: 460px;
+        top: calc(50% - 1px);
+        background-image: linear-gradient(
+270deg,hsla(0,0%,100%,0),#fff 47%,hsla(0,0%,100%,0));
+        }
+        .addlimit a{
+            display: block;
+            width: 94px;
+            height: 38px;
+            text-decoration: none;
+            color: black;
+            line-height: 38px;
+            font-size: 16px;
+            font-weight: 350;
+            transition: .6s;
+            
+        }
+        .addlimit button{
+            margin-top: 50px;
+            background: white;
+            text-align: center;
+            border-radius: 20px;
+            border: 1px solid #d9d9d9;
+            transition: .6s;
+            user-select: none;
+        }
+        .addlimit a:hover{
+            color: #1890ff;
+        }
+        .addlimit button:hover{
+            border-color:#1890ff;
+        }
+        .headerbottom{
+            position:absolute;
+            width: 40PX;
+        height: 40PX;
+        color: #fff!important;
+        left: 50%;
+        bottom: 40PX;
+        transform: translateX(-50%);
+        border: 1px solid #fff;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        cursor: pointer;
+        }
+        
+        .headerbottom .jiantou{
+            font-family: "iconfont"!important;
+            font-size: 16px;
+            font-style: normal;
+            -webkit-font-smoothing: antialiased;
+            font-size: 30px;
+        }
+        @font-face {
+           
+  font-family: 'iconfont';  /* Project id 3181985 */
+  src: url('//at.alicdn.com/t/font_3181985_d9syapc1ryr.woff2?t=1644991390821') format('woff2'),
+       url('//at.alicdn.com/t/font_3181985_d9syapc1ryr.woff?t=1644991390821') format('woff'),
+       url('//at.alicdn.com/t/font_3181985_d9syapc1ryr.ttf?t=1644991390821') format('truetype');
+
+}
+
+
+    @keyframes movepoint{
+        0%{
+            top:-3px
+        }
+        50%{
+            top: 8px;
+        }
+        100%{
+            top: -3px;
+        }
+    }
+        .dajiantou{
+            position: relative;
+            animation: movepoint 2s infinite;
+        }
+
+       .jiantou{
+        font-family: "iconfont"!important;
+        font-size: 16px;
+        font-style: normal;
+        -webkit-font-smoothing: antialiased;
+        
+        }
+
+/* jiantou */
+        .subsuxian{
+            box-sizing: border-box;
+        margin: 0;
+        color: #1f2329;
+        font-size: 14px;
+        font-variant: tabular-nums;
+        line-height: 1.5;
+        list-style: none;
+        font-feature-settings: "tnum";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0.2vw;
+        padding: 0 0 0 2px;
+        }
+        .subsuxian::after{
+            content: "";
+        display: block;
+        position: relative;
+        height: 36px;
+        left: 50%;
+        transform: translateX(-150%);
+        border-left: 1px dashed #fff;
+        top: 14px;
+        }
+        /* pg2 */
+        /* left */
+        .pg2all{
+            width: 100%;
+            height: 721px;
+            background-color: white;
+        }
+        .mainbody1{
+            display: flex;
+            width: 1400px;
+            height: 100%;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        .leftbigbox{
+            width: 680px;
+            height: 600px;
+            margin-top: 40px;
+            /* display: none; */
+        }
+        @keyframes appear{
+        form{opacity: 0;}
+        to{opacity: 1;}
+        }
+        .leftbigboxtitle{
+            height: 400PX;
+        letter-spacing: -1PX;
+        background-color: #f2f2f2;
+        padding: 30PX 70PX;
+        border-radius: 30PX;
+        position: relative;
+        
+        }
+        .leftbigboxtitlehead{
+            font-size: 35px;
+            opacity: 0;
+            animation: appear 1s .1s forwards;
+        }
+        .leftbigboxtitlecontent{
+            font-size: 20PX;
+            line-height: 40PX;
+            margin-top: 20PX;
+            color: #000;
+            font-family: "STKaiti";
+            opacity: 0;
+            animation: appear 1s  .1s forwards;
+        }
+        .leftbigboximg{
+            position: relative;
+        }
+        @keyframes leftboxpeoplebm{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom:54px ;
+                left: 250px;
+            }
+            
+        }
+        
+        @keyframes cx{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom: 145px;
+                left: 59px;
+            }
+        }
+        @keyframes rc{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom: 82px;
+                left: 436px;
+            }
+        }
+        @keyframes js{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                bottom: 48px;
+                left: 586px;
+            }
+        }
+        @keyframes nq{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            
+            100%{   
+                bottom: 137px;
+                left: 230px;
+            }
+        }
+        @keyframes fx{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                left: 547PX;
+                bottom: 130PX;
+            }
+        }
+        @keyframes hk{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                left: 5px;
+                bottom: 71px;
+            }
+        }
+        @keyframes sh{
+            0%{
+                left: 235PX;
+                bottom: 20PX;
+            }
+            100%{
+                left: 391PX;
+                bottom: 150PX;
+            }
+        }
+        @keyframes float{
+            0% {
+        transform: translateY(-3PX);
+        opacity: 1;
+    }
+            50% {
+        transform: translateY(0);
+        opacity: 1;
+}
+            100% {
+         transform: translateY(-3PX);
+        opacity: 1;
+}
+        }
+        .leftboxpeoplebm{
+            animation: leftboxpeoplebm 3s forwards, float 2s 0s infinite;
+        }
+        .leftboxpeoplecx{
+           animation: cx 3s forwards,float 2s .14s infinite;
+        }
+        .leftboxpeoplerc{
+            animation: rc 3s forwards,float 2s .28s infinite;
+        }
+        .leftboxpeoplejs{
+            animation: js 3s forwards,float 2s .42s infinite;
+        }
+        .leftboxpeoplenq{
+            animation: nq 2s forwards,float 2s .56s  infinite
+        }
+        .leftboxpeoplefx{
+            animation: fx 3s forwards,float 2s .7s  infinite
+        }
+        .leftboxpeoplehk{
+            animation: hk 3s forwards,float 2s .84s  infinite
+        }
+        .leftboxpeoplesh{
+            animation: sh 3s forwards,float 2s .98s  infinite
+        }
+
+        .leftbigboximg img{
+            width: 500PX;
+            height: 231PX;
+            position: relative;
+            bottom: 30px;
+            left: 90PX;
+        }
+        
+        .leftbigboximg span{
+            height: 40PX;
+            padding: 3PX 6PX;
+            font-size: 20PX;
+            line-height: 34PX;
+            text-align: center;
+            background-color: #f2f2f2;
+            color: #000;
+            border-radius: 10PX;
+            display: inline-block;
+            position: absolute;
+            
+        }
+        /* pg2right */
+        .rightbigbox{
+            width: 650PX;
+            height: 600PX;
+            margin-top: 40PX;
+            background-color: #f2f2f2;
+            border-radius: 30PX;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .rightbigbox pre{
+            font-size: 21PX;
+            letter-spacing: 1PX;
+            line-height: 40PX;
+            margin-top: 50PX;
+            margin-bottom: 0;
+            margin-left: 40PX;
+            color: #000;
+            font-family: "STKaiti";
+            opacity: 0;
+            animation: appear 1s  .1s forwards;
+        }
+        .borderbox{
+            position: relative;
+            top: 16px;
+            left: 154px;
+            border: 30px solid #535353;
+            border-radius: 40px;
+            overflow:hidden ;
+            background-color: #535353;
+            animation:  move 1.5s ease forwards;
+        }
+        @keyframes move {
+            0% {
+    transform: translate(491PX,339PX);
+}
+            100% {
+    transform: translate(0);
+}
+            
+        }
+       
+        .rightbigbox .imgbox{
+            position: relative;
+        }
+        .rightbigbox .imgbox img{
+            width: 470PX;
+            height: 313PX;
+            max-width: 470PX;
+            max-height: 313PX;
+            border-radius: 6PX 0 0 0;
+        }
+        .rightbigbox .mask{
+            width: 470px;
+            height: 313px;
+            background-color: rgba(0,0,0,.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: .6s;             
+        }
+        .rightbigbox .mask:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+        .mask div{
+            position: absolute;
+            top: 47%;
+            left: 42%;
+            font-size: 13px;
+            color: #fff;
+        }
+        /* pg3 */
+        .pg3 .mainbody2{
+            position: relative;
+            height: 721px;
+            width: 100%;
+        }
+        .departmenttitle{
+            margin: 0 auto;
+            width: 1px;
+            position: relative;
+        }
+        .mainbody2 .departmenttitle span{
+            width: 130PX;
+            font-size: 30PX;
+            text-align: center;
+            position: absolute;
+            left: 500PX;
+            top: 50PX;
+        }
+        .bgc-lunbo{
+            height: 721PX;
+            position: relative;
+            overflow: hidden;
+            
+        }
+        
+        .lunbokuaiqianduan{
+            width: 1100PX;
+            height: 450PX;
+           
+            display: flex;
+            justify-content: space-between
+        }
+        .lunbokuaiqianduan .imgbox img{
+            width: 500px;
+            height: 353px;
+            text-align: center;
+        }
+        .wenzikuai{
+            width: 500px;
+        }
+        .end{
+            width: 900px;
+            height: 900px;
+            background-color: #000;
+        }
+        .wenzikuai .biaoti{
+            font-size: 55PX;
+            margin: 11PX 0 50PX;
+        }
+        .wenzikuai .content{
+            font-size: 30px;
+            line-height: 50px;
+        }
+        .lunbolist{
+            width: 8000px;
+        }
+        .lunbolist li:nth-child(1){
+            width: 1100px;
+            height: 430px;
+            position: absolute; 
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-55%);
+            transition: .6s;
+        }
+        .lunbokuaihouduan{
+            width: 1100PX;
+            height: 450PX;
+            
+            display: flex;
+            justify-content: space-between
+        }
+        .lunbokuaihouduan .imgbox img{
+            width: 500px;
+            height: 353px;
+            text-align: center;
+        }
+        .lunbolist li:nth-child(2){
+            width: 1100px;
+    height: 430px;
+    position: absolute;
+    top: 50%;
+    left: 150%;
+    transform: translate(-50%,-55%);
+    transition: .3s;
+}
+        .lunbolist li:nth-child(3){
+            width: 1100px;
+    height: 430px;
+    position: absolute;
+    top: 50%;
+    left: 250%;
+    transform: translate(-50%,-55%);
+    transition: .3s;
+    
+        }
+        .lunbokuaichanping{
+            width: 1100PX;
+            height: 450PX;
+            
+            display: flex;
+            justify-content: space-between
+        }
+        .lunbokuaichanping .imgbox img{
+            width: 500px;
+            height: 353px;
+            text-align: center;
+        } 
+        .lunbolist li:nth-child(4){
+            width: 1100px;
+    height: 430px;
+    position: absolute;
+    top: 50%;
+    left: 350%;
+    transform: translate(-50%,-55%);
+    transition: .3s;
+        }
+        .lunbokuaijiexie{
+            width: 1100PX;
+            height: 450PX;
+            
+            display: flex;
+            justify-content: space-between
+        }
+        .lunbokuaijiexie .imgbox img{
+            width: 500px;
+            height: 353px;
+            text-align: center;
+        } 
+        .lunbolist li:nth-child(5){
+            width: 1100px;
+    height: 430px;
+    position: absolute;
+    top: 50%;
+    left: 450%;
+    transform: translate(-50%,-55%);
+    transition: .3s;
+        }
+        .lunbokuaianzhuo{
+            width: 1100PX;
+            height: 450PX;
+            
+            display: flex;
+            justify-content: space-between
+        }
+        .lunbokuaianzhuo .imgbox img{
+            width: 500px;
+            height: 353px;
+            text-align: center;
+        } 
+        .wenzikuai{
+            position: relative;
+            top: -28px;
+        }
+        .lunbokuaianzhuo img{
+            height: 419px;
+        }
+        li{
+            list-style: none;
+        }
+        .xuanxian{
+            width: 235px;
+            height: 10px;
+            position: absolute;
+            display: flex;
+            justify-content: space-evenly;
+            bottom: 19%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .xuanxian a {
+            width: 30px;
+            height: 10px;
+            background-color: #d9d9d9;
+            border-radius: 5px;
+            transition: .6s;
+        }
+        .xuanxian a:nth-child(1){
+            width: 40px;
+            background-color: rgb(80,80,80);
+        }
+        .xuanxian a:hover{
+            background-color: rgb(124,124,124)
+        }
+        .li{
+            position: absolute;
+            left: -1519px;
+        }
+        /* pg4 */
+        @keyframes leftmove{
+            0% {
+    transform: translateX(-100PX);
+    opacity: 0;
+}
+100%{
+    transform: translateX(0);
+    opacity: 1;
+}
+        }
+        @keyframes topmove{
+            0% {
+    transform: translateY(-100PX);
+    opacity: 0;
+}
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+        }
+        @keyframes bottommove{
+            0% {
+    transform: translateX(100PX);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0);
+    opacity: 1;
+}
+        }
+        .pg4-bgc{
+            width: 100%;
+            height: 630px;
+            background-color: #fff;
+        }
+        .pg4-bgc .mainbody{
+            width: 1350px;
+            height: 100%;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 80PX 0 90PX;
+            display: flex;
+            justify-content: space-between;
+        }
+        .pg4-bgc .mainbody .leftbody{
+            background:linear-gradient(270deg,#c9dae7,#ebeff9);
+            height: 100%;
+            width: 400px;
+            padding: 40px;
+            text-align: center;
+            border-radius: 30px;
+            animation: leftmove 1s forwards;
+        }
+        .pg4-bgc .mainbody .rightbody{
+            background-color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 880px;
+        }
+        .pg4-bgc .mainbody .rightbodytop{
+            background-color:white;
+            display: flex;
+            justify-content: space-between;
+            height: 220px;
+            z-index: 2;
+            width: 880px;
+            animation: topmove 1s forwards;
+        }
+        .pg4-bgc .mainbody .rightbodytop div:nth-child(1){
+            width: 280px;
+            background-color: #f2f2f2;
+            text-align: center;
+            border-radius: 30px;
+            
+        }
+        .pg4-bgc .mainbody .rightbodytop div:nth-child(2){
+            width : 540px;
+            background-color: #f2f2f2;
+            padding: 20px 40px;
+            text-align: center;
+            font-size: 20px;
+            border-radius: 30px;
+        }
+        .rightbodybottom{
+            height: 220px;
+            background-color: yellow;
+            animation: bottommove 1s forwards;
+        }
+        .pg4-bgc .mainbody .title{
+            font-size: 30px;
+            font-weight: 600;
+        }
+        .pg4-bgc .mainbody .suoying{
+            font-size: 23PX;
+            font-weight: 550;
+            color: #6593a8;
+            margin-top: -2px;
+        }
+        .pg4-bgc .mainbody .content{
+            font-size: 17px;
+            /* margin-top: 20px; */
+            padding-top: 20px;
+        }
+        .pg4-bgc .mainbody .imgbox{
+            width: 300px;
+            height: 252px;
+        }
+        .pg4-bgc .mainbody .imgbox img{
+            width: 100%;
+            height: 100%;
+        }
+        .pg4-bgc .mainbody .rightbodytop div:nth-child(1) div{
+            margin: 0 auto;
+            font-size: 40px;
+            font-weight: 600;
+            margin-top: 80px;
+        }
+        .rightbodytopcontent span{
+            display: block;
+            margin-top: 20px;
+            line-height: 31px;
+        }
+
+        .youwenbidaimg{
+            width: 160px;
+            height: 170px;
+        }
+        .youwenbidaimg img{
+            width: 100%;
+            height: 100%;
+        }
+        .pg4-bgc .rightbodybottom{
+            display: flex;
+            justify-content: space-between;
+            padding: 15px 38px;
+            border-radius: 30px;
+            background: linear-gradient(90deg,#f1f2d0,#b1d8b4);
+        }
+        .youwencontent{
+            width: 600px;
+        }
+        .youwencontent div:nth-child(1){
+            font-size: 30PX;
+            font-weight: 600;
+        }
+        .youwencontent div:nth-child(2){
+            font-size: 23PX;
+            font-weight: 550;
+            color: #6a9b71;
+             margin-top: -5PX;
+        }
+        .youwencontent div:nth-child(3){
+            margin-top: 15px;
+            font-size: 17PX;
+            line-height: 30px;
+        }
+        /* pg5 */
+        .pg5-bgc{
+            width: 100%;
+            height: 721px;
+            background-color: #fff;
+        }
+        .pg5-bgc .mainbody{
+            width: 1400PX;
+            height: 100%;
+            margin: 0 auto;
+            background-color: white;
+        }
+        .membertitle{
+           
+            text-align: center;
+            font-size: 30px;
+            margin: 50PX 0;
+        }
+        .pg5-bgc .maincontent{
+            width: 100%;
+            height: 510PX;
+            display: flex;
+            justify-content: space-between;
+        }
+        .pg5-bgc .title{
+            margin-bottom: 50px;
+            font-size: 40px;
+            font-weight: 600;
+        }
+        .pg5-bgc .video{
+            width: 600PX;
+             height: 338PX;
+            border-radius: 10PX;
+            overflow: hidden;
+        }
+        .pg5-bgc .video video{
+            width: 100%;
+            height: 100%;
+            border-radius: 10PX;
+        }
+        .pg5-bgc .liuyan{
+            width: 700PX;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        @keyframes right{
+            0% {
+    transform: translateX(0);
+}
+50% {
+    transform: translateX(870PX);
+}
+100% {
+    transform: translateX(0);
+}
+
+
+        }
+        @keyframes left{
+            0% {
+    transform: translateX(0);
+}
+50% {
+    transform: translateX(-830PX);
+}
+100% {
+    transform: translateX(0);
+}
+
+
+        }
+        .pg5-bgc .liuyan .member-middle-right-toRight{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            right: -180PX;
+            bottom: 0;
+            z-index: 1;
+        }
+        .pg5-bgc .liuyan .member-middle-right-toLeft{
+            width: 170PX;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            position: absolute;
+            left: -170PX;
+            bottom: 0;
+            z-index: 1;
+        }
+        .pg5-bgc .liuyan .member-middle-right-toLeft span:nth-child(odd){
+            animation: right 15s linear infinite;
+        }
+        .pg5-bgc .liuyan .member-middle-right-toLeft span:nth-child(even){
+            animation: right 19s linear infinite;
+        }
+        .pg5-bgc .liuyan .member-middle-right-toRight span:nth-child(odd){
+            animation: left 21s linear infinite;
+        }
+        .pg5-bgc .liuyan .member-middle-right-toRight span:nth-child(even){
+            animation: left 17s linear infinite;
+        }
+        .pg6-bgc{
+            width: 100%;
+            height: 721PX;
+            background-color: #fff;
+            overflow: hidden;
+
+        }
+        .pg6-bgc .title{
+            position: relative;
+            font-size: 30px;
+            top: 10px;
+            left: 120px;
+        }
+        .pg6-bgc .liuchengtu{
+            width: 1050PX;
+            height: 100%;
+            margin: 0 auto;
+            padding: 70PX 0 40PX;
+            position: relative;
+        }
+        .pg6-bgc .box1{
+            width: 100%;
+    height: 40%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+        }
+        .pg6-bgc .box1 .baoming{
+            width: 200PX;
+    position: relative;
+    text-align: center;
+        }
+        .pg6-bgc .box1 .baoming img{
+            width: 140px;
+        }
+       .wenzi1{
+        font-size: 25px;
+       }
+       .wenzi2{
+           font-size: 20px;
+       }
+       @font-face {
+  font-family: 'iconfont';  /* Project id 3181985 */
+  src: url('https://at.alicdn.com/t/font_3181985_7gtgl9rcepr.woff2?t=1644821398325') format('woff2'),
+       url('https://at.alicdn.com/t/font_3181985_7gtgl9rcepr.woff?t=1644821398325') format('woff'),
+       url('https://at.alicdn.com/t/font_3181985_7gtgl9rcepr.ttf?t=1644821398325') format('truetype');
+}
+.iconfont{
+    font-family: "iconfont"!important;
+    font-size: 30px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;}
+    .pg6-bgc .box1 .zhaoxin{
+            width: 200PX;
+    position: relative;
+    text-align: center;}
+    .pg6-bgc .box1 .zhaoxin img{
+        width: 140px;
+    }
+    .pg6-bgc .box1 .offer{
+            width: 200PX;
+    position: relative;
+    text-align: center;}
+    .pg6-bgc .box1 .offer img{
+        width: 140px;
+    }
+    .pg6-bgc .box2{
+        width: 100%;
+    height: 25%;
+    text-align: center;
+    }
+    .pg6-bgc .box2 a{
+        width: 100%;
+        height: 100%;
+    }
+    .pg6-bgc .box2 img{
+        width: 44%;
+    }
+    .pg6-bgc .box3{
+        font-size: 40px;
+        font-weight: 600;
+        text-align: center;
+        letter-spacing: 20px;
+        padding: 30px 0;
+    }
+    .pg6-bgc .box4{
+        display: flex;
+        justify-content: space-around;
+        padding: 0 240px;
+    }
+    .pg6-bgc .box4 div {
+        font-size: 19px;
+        background-color: #d6edee;
+    border-radius: 10PX;
+    padding: 7PX 6PX;
+    text-align: center;
+    cursor: pointer;
+    }
+    .pg6-bgc .box4 a{
+        text-decoration: none;
+        color:black;
+    }
+    .pg7-bgc{
+        width: 100%;
+    height: 190PX;
+    background-color: #f2f2f2;
+    }
+    .pg7body{
+        margin: 0 auto;
+        width: 1400PX;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    }
+    .pg7body .toppart{
+        height: 110px;
+        margin: 20PX 0 10PX;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+    .pg7body .toppart .first1{
+        height: 70%;
+    }
+    .pg7body .toppart .first1 img{
+        height: 100%;
+    }
+    .suxian{
+        width: 60PX;
+    height: 80PX;
+    border-left: 1px solid #757575;
+    }
+    .first2{
+        width: 700px;
+        height: 100%;
+    display: flex;
+    justify-content: space-between;
+    }
+    .suxian2{
+        width: 60PX;
+    height: 80PX;
+    border-right: 1px solid #757575;
+    }
+    
+        .erweima{
+            height: 100%;
+    padding-top: 15PX;
+    text-align: center;
+        }
+        .erweima img{
+            height: 80PX;
+    width: 80PX;
+    
+        }
+        .second{
+            margin-top: 11PX;
+    width: 300PX;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+        }
+        .second2{
+            width: 300PX;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+        }
+        .lianxi{
+            font-size: 19px;
+        }
+        .woemen{
+            font-size: 19px;
+        }
+        .shidai{
+            font-size: 27px;
+            margin-bottom: 5px;
+        }
+        .touming a {
+            text-decoration: none;
+            color: #000;
+            font-size: 13px;   
+        }
+        .erp{
+            color: #000;
+            font-size: 13px;
+            margin-top: 3px; 
+        }
+        .bottompart{
+            width: 650PX;
+    margin: 10PX auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+        }
+        
+        .maskneed{
+            position: relative;
+            text-align: center;
+        }
+        .maskneed .maskone {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 90px;
+            height: 84px;
+            opacity: 0;
+            transition: .6s;
+            background-color: rgba(0,0,0,.5);
+            cursor: pointer;
+        }
+        .maskneed .maskone:hover{
+            opacity: 1;
+        }
+        .maskneed .maskone div{
+            position: absolute;
+    top: 39%;
+    left: 18%;
+    font-size: 13px;
+    color: #fff;
+        }
+        @keyframes buttonDance{
+        0% {
+    transform: translateY(0);
+}
+50% {
+    transform: translateY(-7PX);
+}
+100% {
+    transform: translateY(0);
+}
+}
+
+        .back-to-top-icon {
+    width: 40PX;
+    height: 40PX;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: calc(50% + 250px);
+    left: calc(50% + 695px);
+    background-color: #fff;
+    border-radius: 50%;
+    border: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    cursor: pointer;
+    box-shadow: 0 2px 10px 0 rgb(31 35 41 / 10%);
+    transition: all .4s;
+    animation: buttonDance 2S cubic-bezier(.215,.75,.5,1) infinite;
+    -webkit-animation: buttonDance 2S infinite;
+    -moz-animation: buttonDance 2S infinite;
+    -ms-animation: buttonDance 2S infinite;
+    -o-animation: buttonDance 2S infinite;
+}
+.back-to-top-icon .icon {
+    
+    color: #000;
+    font-size: 20PX;
+    opacity: 1;
+    z-index: 5;
+}
+
+    </style>
+    <script>
+        window.onload = function(){
+            let allA = document.getElementsByClassName('a');
+            let index = 0;
+            let num = 0;
+            let lunbolist = document.getElementsByClassName('lunbolist');
+            let li = document.getElementsByClassName('li');
+            for(let i =0 ;i<allA.length;i++)
+            {
+                
+               var clickclick = allA[i].onclick = function(){
+                   
+                   if(i==0){
+                       li[i].style.opacity = '1';
+                       li[1].style.opacity = '0';
+                       li[2].style.opacity = '0';
+                       li[3].style.opacity = '0';
+                       li[4].style.opacity = '0';
+                       allA[i].style.backgroundColor = 'rgb(80,80,80)';
+                       allA[1].style.backgroundColor = '#d9d9d9';
+                       allA[2].style.backgroundColor = '#d9d9d9';
+                       allA[3].style.backgroundColor = '#d9d9d9';
+                       allA[4].style.backgroundColor = '#d9d9d9';
+                       allA[i].style.width = '40px';
+                       allA[1].style.width ='30PX';
+                       allA[2].style.width ='30PX';
+                       allA[3].style.width ='30PX';
+                       allA[4].style.width ='30PX';
+                   }else if(i==1){
+                    li[i].style.opacity = '1';
+                       li[i].style.marginLeft ='-100%';
+                       li[0].style.opacity = '0';
+                       li[2].style.opacity = '0';
+                       li[3].style.opacity = '0';
+                       li[4].style.opacity = '0';
+                       allA[i].style.backgroundColor = 'rgb(80,80,80)';
+                       allA[0].style.backgroundColor = '#d9d9d9';
+                       allA[2].style.backgroundColor = '#d9d9d9';
+                       allA[3].style.backgroundColor = '#d9d9d9';
+                       allA[4].style.backgroundColor = '#d9d9d9';
+                       allA[i].style.width = '40px';
+                       allA[0].style.width ='30PX';
+                       allA[2].style.width ='30PX';
+                       allA[3].style.width ='30PX';
+                       allA[4].style.width ='30PX';
+                   }else if(i==2){
+                    li[i].style.opacity = '1';
+                       li[i].style.marginLeft ='-200%';
+                       li[0].style.opacity = '0';
+                       li[1].style.opacity = '0';
+                       li[3].style.opacity = '0';
+                       li[4].style.opacity = '0';
+                       allA[i].style.backgroundColor = 'rgb(80,80,80)';
+                       allA[0].style.backgroundColor = '#d9d9d9';
+                       allA[1].style.backgroundColor = '#d9d9d9';
+                       allA[3].style.backgroundColor = '#d9d9d9';
+                       allA[4].style.backgroundColor = '#d9d9d9';
+                       allA[i].style.width = '40px';
+                       allA[0].style.width ='30PX';
+                       allA[1].style.width ='30PX';
+                       allA[3].style.width ='30PX';
+                       allA[4].style.width ='30PX';
+                   }else if(i==3){
+                    li[i].style.opacity = '1';
+                       li[i].style.marginLeft ='-300%';
+                       li[0].style.opacity = '0';
+                       li[1].style.opacity = '0';
+                       li[2].style.opacity = '0';
+                       li[4].style.opacity = '0';
+                       allA[i].style.backgroundColor = 'rgb(80,80,80)';
+                       allA[0].style.backgroundColor = '#d9d9d9';
+                       allA[2].style.backgroundColor = '#d9d9d9';
+                       allA[1].style.backgroundColor = '#d9d9d9';
+                       allA[4].style.backgroundColor = '#d9d9d9';
+                       allA[i].style.width = '40px';
+                       allA[0].style.width ='30PX';
+                       allA[2].style.width ='30PX';
+                       allA[1].style.width ='30PX';
+                       allA[4].style.width ='30PX';
+                }else if(i==4){
+                    li[i].style.opacity = '1';
+                       li[i].style.marginLeft ='-400%';
+                       li[0].style.opacity = '0';
+                       li[1].style.opacity = '0';
+                       li[2].style.opacity = '0';
+                       li[3].style.opacity = '0';  
+                       allA[i].style.backgroundColor = 'rgb(80,80,80)';
+                       allA[0].style.backgroundColor = '#d9d9d9';
+                       allA[2].style.backgroundColor = '#d9d9d9';
+                       allA[3].style.backgroundColor = '#d9d9d9';
+                       allA[1].style.backgroundColor = '#d9d9d9';
+                       allA[i].style.width = '40px';
+                       allA[0].style.width ='30PX';
+                       allA[2].style.width ='30PX';
+                       allA[3].style.width ='30PX';
+                       allA[1].style.width ='30PX';            
+                }
+
+            }
+
+        }
+      //固定定位箭头
+    var backToTopIcon = document.getElementsByClassName('back-to-top-icon')[0];
+    var timer = null;
+    var isTop = true;
+    //获取页面可视区高度
+    var clientHeight = document.documentElement.clientHeight;
+    //滚动条滚动时触发
+    window.onscroll = function() {
+      //显示回到顶部按钮
+      // var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+      // if (osTop >= clientHeight) {
+      // 	btn.style.display = "block";
+      // } else {
+      // 	btn.style.display = "none";
+      // };
+      //回到顶部过程中用户滚动滚动条，停止定时器
+        
+      if (!isTop) {
+        clearInterval(timer);
+      };
+      isTop = false;
+      backToTopIcon.onclick = function() {
+      //设置定时器
+      timer = setInterval(function() {
+        //获取滚动条距离顶部高度
+        var osTop = document.documentElement.scrollTop || document.body.scrollTop;
+        var ispeed = -6;
+        document.documentElement.scrollTop = document.body.scrollTop = osTop + ispeed;
+        //到达顶部，清除定时器
+        if (osTop == 0) {
+          clearInterval(timer);
+        };
+         isTop = true; 
+      }, 1);
+    };
+    };
+    
+  
+    //首页箭头
+    let headerBottom =  document.getElementsByClassName('headerbottom')[0];
+    headerBottom.onclick =function(){
+
+         timer2 = setInterval(function(){
+
+            
+
+            var ossTop2 = document.documentElement.scrollTop || document.body.scrollTop;
+
+            let isspeed2 = 6 ;
+            
+            document.documentElement.scrollTop = ossTop2 + isspeed2 ;
+
+            //到第二页
+            limittop = 50 + 'px' ;
+
+            if(ossTop2 >800){
+
+                clearInterval(timer2)
+            };
+            // console.log(ossTop2)
+        },1)
+    }
+
+  }
+    
+        
+    </script>
+</head>
+<body>
+    <div class="all">
+        <div class="header">
+            <video class="tv" src="../1/asset/shouyeshipin-little.mp4" autoplay muted loop  poster="https://lf3-cdn-tos.bytescm.com/obj/ttfe/ATSX/mainland/video-poster_1576231362701.png"></video>
+            <div class="lefttoplogo">
+                <img src="../1/asset/logo.d32e06fc.png" alt="正在加载">
+            </div>
+            <div class="nav">
+                <div class="navcontent"> <a href="#two">关于我们</a> </div>
+                <div class="navcontent"> <a href="#three">部门介绍</a> </div>
+                <div class="navcontent"> <a href="#four">产品介绍</a> </div>
+                <div class="navcontent"> <a href="#five">成员动态</a> </div>
+                <div class="navcontent"> <a href="#six">招新流程</a> </div>
+            </div>
+            <div class="headercentre">
+                <div class="addlimit">
+                <div class="centrecontent1">信管工作室&nbsp;·&nbsp;2021年度邀请函</div>
+                <div class="centrecontent2">想和优秀的你&nbsp;&nbsp;&nbsp;&nbsp;一起改变世界</div>
+                <div class="centrecontent3">JOIN MISLAB</div>
+                <label for="btn">
+                    <button id="btn">
+                        <span>
+                            <a href="#six">加入我们</a>
+                        </span>
+                    </button>
+                </label>
+            </div>
+            </div>
+            <div class="headerbottom">
+                <span class="dajiantou">
+                    <span class="iconfont jiantou">&#xeb0a;</span>
+                </span>
+            </div>
+            <div class="subsuxian"></div>
+            
+        </div>
+        <a name="two"></a>
+        <div class="pg2all">
+        <div class="mainbody1">
+            <div class="leftbigbox" id="leftbigbox">
+                <div class="leftbigboxtitle">
+                    <div class="leftbigboxtitlehead">关于我们</div>
+                    <pre class="leftbigboxtitlecontent">
+信管工作室成立于2008年 
+是一个以发展内部成员专业技能与专业素养、提升信管专业
+技术氛围的学生组织。不断探索、实践新的技术体系，在十余年
+的成长过程当中，逐渐完善自身技术体系，扩大团队规模。
+我们希望并也一直在努力将一些成功经验和有趣的团队文化
+传播出去影响更多的人。</pre>
+                </div>
+                <div class="leftbigboximg">
+                    <img src="../1/asset/us.png" alt="图片">
+                    <span class="leftboxpeoplebm">百名工程师</span>
+                    <span class="leftboxpeoplecx">创新</span>
+                    <span class="leftboxpeoplerc">人才培养</span>
+                    <span class="leftboxpeoplejs">技术应用</span>
+                    <span class="leftboxpeoplenq">年轻</span>
+                    <span class="leftboxpeoplefx">分享日</span>
+                    <span class="leftboxpeoplehk">黑客马拉松文化周</span>
+                    <span class="leftboxpeoplesh">周会</span>
+                </div>
+            </div>
+            
+            <div class="rightbigbox">
+                <pre>
+信管工作室永远都是一个温暖积极的大家庭
+这里承载着勤奋、进步、友爱、关怀、和谐与温馨
+这里汇聚了优秀的学长学姐，在学习和生活上伴你同行
+这里诞生了卓越的技术，新颖的产品和以学习至上的优秀理念
+                </pre>
+                <div class="borderbox">
+                <div class="imgbox">
+                    <img src="../1/asset/members.png" alt="">
+                    <div class="mask"><div><svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"></path></svg>Preview</div></div>
+                </div>
+                </div>
+            </div>
+        </div>
+        <a name="three"></a>
+    </div>
+    <div class="pg3">
+        <div class="mainbody2">
+            <div class="departmenttitle">
+                <span>部门介绍</span>
+            </div>
+            <div class="bgc-lunbo"> 
+                <div class="bgc-lunbo-kuang">
+                    <ul class="lunbolist">
+                    <li class="li">
+                        <div class="lunbokuaiqianduan">
+                            <div class="imgbox">
+                                <img src="../1/asset/qianduan.png" alt="">
+                            </div>
+                            <div class="wenzikuai">
+                                <div class="biaoti">
+                                    Web开发部
+                                </div>
+                                <div class="content">
+                                    前端即网站前台部分，运行在PC端，移动端等浏览器上展现给用户浏览的网页。
+                                    前端开发人员可以使用完美的动效设计和前端技术，给用户带来极高的页面视觉体验和用户交互体验。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <div class="lunbokuaihouduan">
+                            <div class="imgbox">
+                                <img src="../1/asset/houduan.png" alt="">
+                            </div>
+                            <div class="wenzikuai">
+                                <div class="biaoti">
+                                    后端开发部
+                                </div>
+                                <div class="content">
+                                    后端开发指的是运行在后台并且控制前端的内容，它负责程序设计架构以及数据库管理和处理相关的业务逻辑。
+        它主要考虑的是对于业务的控制和处理，功能的实现以及数据的操作。
+                                </div>
+                            </div>
+                        </div>  
+                    </li>
+                    <li class="li">
+                        <div class="lunbokuaichanping">
+                            <div class="imgbox">
+                                <img src="../1/asset/chanpin.png" alt="">
+                            </div>
+                            <div class="wenzikuai">
+                                <div class="biaoti">
+                                    产品设计部
+                                </div>
+                                <div class="content">
+                                    捕捉事物间逻辑，倾听用户们需求，结合各平台数据，设计最好用产品。来产品策划部,
+        培养更缜密的思维，学习产品设计，将从道术器三个层面，建立自己与互联网产品的亲密联系。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <div class="lunbokuaijiexie">
+                            <div class="imgbox">
+                                <img src="../1/asset/jiqixuexi.png" alt="">
+                            </div>
+                            <div class="wenzikuai">
+                                <div class="biaoti">
+                                    机械学习部
+                                </div>
+                                <div class="content">
+                                    机器学习从从历史数据中学习规律，将规律应用到未来中。我们致力于研究如何
+        通过计算的手段，利用数据构建模型，量化过去，预测未来。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="li">
+                        <div class="lunbokuaianzhuo">
+                            <div class="imgbox">
+                                <img src="../1/asset/anzhuo.png" alt="">
+                            </div>
+                            <div class="wenzikuai">
+                                <div class="biaoti">
+                                    Android开发部
+                                </div>
+                                <div class="content">
+                                    Android开发是指从事Android系统操作应用和各种Android平台功能应用，
+        以安卓平台为对象，通过Android studio来布局设计界面与接口实现功能从而达到开发手机软件app。
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+                <div class="xuanxian">
+                    <a href="javascript:void(0)" class="a" id="clickMe"></a>
+                    <a href="javascript:void(0)" class="a" id="clickMe"></a>
+                    <a href="javascript:void(0)" class="a" id="clickMe"></a>
+                    <a href="javascript:void(0)" class="a" id="clickMe"></a>
+                    <a href="javascript:void(0)" class="a" id="clickMe"></a>
+                </div>          
+    </div>
+        </div>
+        <a name="four"></a>
+    </div>
+    <div class="pg4">
+        <div class="pg4-bgc">
+            
+            <div class="mainbody">
+                <div class="leftbody">
+                    <div class="title">ERP虚拟运营系统</div>
+                    <div class="suoying">系统在信管必修课上长期使用</div>
+                    <div class="content">通过构建一个虚拟的市场环境， 让受训者充当企业的CEO，进行企业的模拟运营。 通过此虚拟过程，让受训者体会到如何管理企业 中的物资流动、资金流动和信息流动，以及相互之间的制约与转换关系</div>
+                    <div class="imgbox">
+                        <img src="../1/asset/erp.png" alt="">
+                    </div>
+                </div>
+                <div class="rightbody">
+                    <div class="rightbodytop"> 
+                        <div class="rightbodytopcontent">
+                            <div>产品介绍</div>
+                        </div>
+                        <div class="rightbodytopcontent">
+                            <span>
+                                工作室目前主要有六个项目。<br>
+                                分别是ERP虚拟运营系统，邮问必答，基于大数据的骨质质量评估系统，路径规划系统，智能广告识别项目，作业系统，以及其他小项目，用于保证工作室同学手里都可以利用项目进行实战学习。
+                            </span>
+                        </div>
+                    </div>
+                    <div class="rightbodybottom">
+                        <div class="youwenbidaimg"><img src="../1/asset/youwen.png" alt=""></div>
+                        <div class="youwencontent">
+                            <div>邮问必答</div>
+                            <div>服务于重庆邮电大学学生处学业辅导中心</div>
+                            <div>项目招募学业优秀、乐于助人的志愿者,针对数理类基础课程、<br>
+                                英语公共课程和专业课程面向全校同学提供答疑服务，解决同学学习中的具体学业问题，搭建学习讨论交流平台，构建人人好学和人人学好的良好氛围。
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <a name="five"></a>
+        </div>
+    </div>
+    <div class="pg5">
+
+        <div class="pg5-bgc">
+            <div class="mainbody">
+                <div class="membertitle">
+                    <span>成员动态</span>
+                </div>
+                <div class="maincontent">
+                <div class="videobox">
+                    <div class="title"><span> 优秀学长采访</span></div>
+                    <div class="video">
+                        <video src="../1/asset/xuezhangcaifang.mp4" autoplay="" loop="" controls="" class="member-middle-left-bottom-vedio" poster="../1/asset/lbw.png" webkit-playsinline="true" playsinline="true" x5-playsinline="" x-webkit-airplay="allow" x5-video-player-type="h5" x5-video-player-fullscreen="false"></video>
+                    </div>
+                </div>
+                <div class="liuyan">
+                    <div class="member-middle-right-toRight">
+                        <span class="member-middle-right-toRight-member-0">袁乙文—字节跳动</span><span class="member-middle-right-toRight-member-1">李博文—字节跳动</span><span class="member-middle-right-toRight-member-2">王昊岩—字节跳动</span><span class="member-middle-right-toRight-member-3">李俭奇—字节跳动</span><span class="member-middle-right-toRight-member-4">邓思远—阿里巴巴</span><span class="member-middle-right-toRight-member-5">姚秋鸿—邮科通信</span><span class="member-middle-right-toRight-member-6">曾钰洁—保研电子科技大学</span><span class="member-middle-right-toRight-member-7">蒋璐遥—保研重庆大学</span><span class="member-middle-right-toRight-member-8">杨青—杭州有赞科技</span><span class="member-middle-right-toRight-member-9">何海源—字节跳动</span><span class="member-middle-right-toRight-member-10">方青—字节跳动</span><span class="member-middle-right-toRight-member-11">张金胜—阿里巴巴</span><span class="member-middle-right-toRight-member-12">韩雨潇—百度</span><span class="member-middle-right-toRight-member-13">粱焕勋—oppo</span><span class="member-middle-right-toRight-member-14">马里杰—thoughtworks</span><span class="member-middle-right-toRight-member-15">戴林甫—华为</span><span class="member-middle-right-toRight-member-16">毛家杰—随手科技</span><span class="member-middle-right-toRight-member-17">魏超—猪八戒</span><span class="member-middle-right-toRight-member-18">张怡斐—华为</span><span class="member-middle-right-toRight-member-19">周军—京东</span><span class="member-middle-right-toRight-member-20">牛勤艳—海尔小额贷款</span><span class="member-middle-right-toRight-member-21">罗琴—途风网</span><span class="member-middle-right-toRight-member-22">付一洋—声网Agora</span></div>
+                        <div class="member-middle-right-toLeft"><span class="member-middle-right-toLeft-member-0">陈嘉君—中移物联网</span><span class="member-middle-right-toLeft-member-1">程楷—凡乐科技</span><span class="member-middle-right-toLeft-member-2">雷光龙—思客技术</span><span class="member-middle-right-toLeft-member-3">曹榆—重庆移动</span><span class="member-middle-right-toLeft-member-4">李煦—中移物联网</span><span class="member-middle-right-toLeft-member-5">雷鹏—美团</span><span class="member-middle-right-toLeft-member-6">李敏—中信银行</span><span class="member-middle-right-toLeft-member-7">百聪敏—腾讯</span><span class="member-middle-right-toLeft-member-8">吕海—阿里巴巴</span><span class="member-middle-right-toLeft-member-9">肖航—YEX</span><span class="member-middle-right-toLeft-member-10">曾祥雯—绿盟科技</span><span class="member-middle-right-toLeft-member-11">王欣瑜—云兴维智</span><span class="member-middle-right-toLeft-member-12">冯迪—蚂蚁金服</span><span class="member-middle-right-toLeft-member-13">苏丹—阿里巴巴</span><span class="member-middle-right-toLeft-member-14">张永聪—小米</span><span class="member-middle-right-toLeft-member-15">黄若星—字节跳动</span><span class="member-middle-right-toLeft-member-16">刘晓梅—美丽屋</span><span class="member-middle-right-toLeft-member-17">陈英豪—云兴维智</span><span class="member-middle-right-toLeft-member-18">唐德刚—蘑菇街</span><span class="member-middle-right-toLeft-member-19">曹强—绿盟科技</span><span class="member-middle-right-toLeft-member-20">朱珍珍—杏树林</span><span class="member-middle-right-toLeft-member-21">左逸飞—科大讯飞</span><span class="member-middle-right-toLeft-member-22">刘启丽—第四范式</span></div>
+                </div>
+            </div>
+            </div>
+            <a name="six"></a>
+
+        </div>
+        
+    </div>
+    <div class="pg6">
+        <div class="pg6-bgc">
+            <div class="title">招新流程</div>
+            <div class="liuchengtu">
+                <div class="box1">
+                    <div class="baoming">
+                        <img src="../1/asset/liucheng1.png" alt="">
+                        <div class="wenzi1">报名/预习</div> 
+                        <div class="wenzi2">8月中旬—9月中旬</div>
+                    </div>
+                    <div class="jiantou1">
+                        <i class="iconfont">&#xeb08;</i>
+                    </div>
+                    <div class="zhaoxin">
+                        <img src="../1/asset/liucheng2.png" alt="">
+                        <div class="wenzi1">招新/培训</div> 
+                        <div class="wenzi2">9月中旬—12月中旬</div>
+                    </div>
+                    <div class="jiantou1">
+                        <i class="iconfont">&#xeb08;</i>
+                    </div>
+                    <div class="offer">
+                        <img src="../1/asset/liucheng3.png" alt="">
+                        <div class="wenzi1">offer/项目</div> 
+                        <div class="wenzi2">12月中旬—长期</div>
+                    </div>
+                </div>
+                <div class="box2">
+                    <a href="https://www.wjx.top/vj/Q0qa2uE.aspx">
+                        <img src="../1/asset/jiaru.png" alt="">
+                    </a>
+                </div>
+                <div class="box3">
+                    <div>想和优秀的你&nbsp;&nbsp;一起改变世界</div>
+                </div>
+                <div class="box4">
+                    <div>
+                        <a href="https://www.wjx.top/vj/Q0qa2uE.aspx">报名投递</a>
+                    </div>
+                    <div>
+                        学员系统
+                    </div>
+                    <div>
+                        <a href="https://jq.qq.com/?_wv=1027&k=LkGcB3dU">招新咨询</a>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+    </div>
+    <div class="pg7">
+        <div class="pg7-bgc">
+            <div class="pg7body">
+                <div class="toppart">
+                    <div class="first1">
+                        <img src="../1/asset/logo1.png" alt="">
+                       
+                    </div>
+                    <div class="first">
+                        <div class="suxian"></div>
+                    </div>
+                    <div class="first2">
+                        <div class="second">
+                            <div class="third">
+                                <div class="lianxi">联系我们</div>
+                                <div class="touming"><a href="https://www.wjx.top/vj/Q0qa2uE.aspx">报名投递</a></div>
+                                <div class="touming"><a href="https://jq.qq.com/?_wv=1027&amp;k=LkGcB3dU">招新咨询</a></div>
+                            </div>
+                            <div class="third">
+                                <div class="woemen">我们的产品</div>
+                                <div class="erp">ERP虚拟运营系统</div>
+                                <div class="erp">邮问必答</div>
+                                <div class="erp">邮读书馆</div>
+                                <div class="erp">学员系统</div>
+                            </div>
+                        </div>
+                        <div class="second2">
+                            <div class="shidai">互联网时代早已到来</div>
+                            <div class="shidai">欢迎加入</div>
+                        </div>
+                    </div>
+                   <div class="first">
+                       <div class="suxian2"></div>
+                   </div>
+                    <div class="first">
+                        <div class="erweima">
+                            <div class="maskneed"><img src="../1/asset/qrcode.png" alt="">
+                                <div class="maskone"><div><svg viewBox="64 64 896 896" focusable="false" data-icon="eye" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z"></path></svg>Preview</div></div></div>
+                           <div> QQ扫码咨询</div>
+                           
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="bottompart"><span>地址：重庆市南岸区崇文路2号重庆邮电大学经济管理学院2907</span><span>邮箱：join@mislab.team</span></div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="back-to-top-icon "><svg t="1644992279547" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5128" width="200" height="200"><path d="M554.666667 268.8v601.6h-85.333334V268.8L337.066667 401.066667 277.333333 341.333333 512 106.666667 746.666667 341.333333l-59.733334 59.733334L554.666667 268.8z" fill="#444444" p-id="5129"></path></svg></div>
+    </div>
+</body>
+</html>
